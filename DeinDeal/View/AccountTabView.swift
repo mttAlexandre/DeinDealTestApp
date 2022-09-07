@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AccountTabView.swift
 //  DeinDeal
 //
 //  Created by Alexandre MONTCUIT on 07/09/2022.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AccountTabView: View {
     var body: some View {
-        HomeView()
+        Text("Empty Account View")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AccountTabView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AccountTabView()
     }
 }

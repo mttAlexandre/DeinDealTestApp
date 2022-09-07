@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  OrderTabView.swift
 //  DeinDeal
 //
 //  Created by Alexandre MONTCUIT on 07/09/2022.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct OrderTabView: View {
     var body: some View {
-        HomeView()
+        Text("Empty Order View")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct OrderTabView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        OrderTabView()
     }
 }
