@@ -38,6 +38,8 @@
 		F0C1A8BD28CA6F4200F609C5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8BC28CA6F4200F609C5 /* Constant.swift */; };
 		F0C1A8BF28CA740A00F609C5 /* CityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8BE28CA740A00F609C5 /* CityDetailViewModel.swift */; };
 		F0C1A8C128CA75AA00F609C5 /* FoodsItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */; };
+		F0C1A8C328CA894E00F609C5 /* FoodCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */; };
+		F0C1A8C528CA896700F609C5 /* FoodCategoryItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		F0C1A8BC28CA6F4200F609C5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F0C1A8BE28CA740A00F609C5 /* CityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewModel.swift; sourceTree = "<group>"; };
 		F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsItemTemplate.swift; sourceTree = "<group>"; };
+		F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryListView.swift; sourceTree = "<group>"; };
+		F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryItemTemplate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,8 @@
 				F0C1A8BA28CA67E600F609C5 /* TitleTextView.swift */,
 				F0C1A8B628CA5C4C00F609C5 /* TitleView.swift */,
 				F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */,
+				F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */,
+				F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -396,12 +402,14 @@
 				F0C1A87428C92B3800F609C5 /* CityChannelInfo.swift in Sources */,
 				F0C1A87828C92B7300F609C5 /* FoodFacetCategories.swift in Sources */,
 				F0C1A8B728CA5C4C00F609C5 /* TitleView.swift in Sources */,
+				F0C1A8C528CA896700F609C5 /* FoodCategoryItemTemplate.swift in Sources */,
 				F0C1A87C28C92BA200F609C5 /* FoodImage.swift in Sources */,
 				F0C1A87628C92B4C00F609C5 /* CityImages.swift in Sources */,
 				F0C1A8BD28CA6F4200F609C5 /* Constant.swift in Sources */,
 				F0C1A86E28C927B100F609C5 /* City.swift in Sources */,
 				F0C1A8B528CA56F400F609C5 /* CityListTabViewModel.swift in Sources */,
 				F0C1A8BF28CA740A00F609C5 /* CityDetailViewModel.swift in Sources */,
+				F0C1A8C328CA894E00F609C5 /* FoodCategoryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FoodFacetCategories: Identifiable, Codable {
+struct FoodFacetCategories: Identifiable, Codable, Hashable {
     
     var id: String
     var label: String

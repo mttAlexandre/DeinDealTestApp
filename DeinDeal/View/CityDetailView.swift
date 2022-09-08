@@ -13,6 +13,33 @@ struct CityDetailView: View {
     
     @StateObject private var viewModel = CityDetailViewModel()
     
+    @State private var selectedFoodCategories: Set<String> = []
+    
+    private var filteredFoodItems: [FoodItem] {
+        if viewModel.foods == nil { return [] }
+        
+        return viewModel.foods!.items
+            .filter {
+                // if no categories are selected, we don't have to filter the list
+                if selectedFoodCategories.isEmpty {
+                    return true
+                }
+                // if at least one category of the food is selected by the user
+                // we display the food on screen
+                for theme in $0.myThemes {
+                    if selectedFoodCategories.contains(theme) {
+                        return true
+                    }
+                }
+                
+                return false
+            }
+        // sort food titles alphabetically
+            .sorted {
+                $0.title < $1.title
+            }
+    }
+    
     var body: some View {
         VStack {
             
@@ -23,9 +50,12 @@ struct CityDetailView: View {
             
             // MARK: filter list
             
+            FoodCategoryListView(selectedFoodCategories: $selectedFoodCategories,
+                                 categories: viewModel.foods?.facetCategories ?? [])
+            
             // MARK: food list
             
-            List(viewModel.foods?.items ?? []) { item in
+            List(filteredFoodItems) { item in
                 FoodsItemTemplate(foodItem: item)
                     .listRowInsets(EdgeInsets())
             }
@@ -44,7 +74,7 @@ struct CityDetailView: View {
 struct CityDetailView_Previews: PreviewProvider {
     static var previews: some View {
         CityDetailView(city: City(
-            id: "geneve",
+            id: "zurich",
             channelInfo: CityChannelInfo(
                 title: "Genf",
                 images: CityImages(
