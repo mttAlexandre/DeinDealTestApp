@@ -28,6 +28,7 @@ struct HomeView: View {
                     Label("Account", systemImage: "person")
                 }
         }
+        .accentColor(redColor)
     }
 }
 

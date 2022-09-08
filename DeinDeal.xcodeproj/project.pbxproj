@@ -35,6 +35,7 @@
 		F0C1A8B728CA5C4C00F609C5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8B628CA5C4C00F609C5 /* TitleView.swift */; };
 		F0C1A8B928CA5C5A00F609C5 /* RedBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8B828CA5C5A00F609C5 /* RedBannerView.swift */; };
 		F0C1A8BB28CA67E600F609C5 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8BA28CA67E600F609C5 /* TitleTextView.swift */; };
+		F0C1A8BD28CA6F4200F609C5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8BC28CA6F4200F609C5 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		F0C1A8B628CA5C4C00F609C5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		F0C1A8B828CA5C5A00F609C5 /* RedBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBannerView.swift; sourceTree = "<group>"; };
 		F0C1A8BA28CA67E600F609C5 /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
+		F0C1A8BC28CA6F4200F609C5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C1A88928C9320A00F609C5 /* RequestHelper.swift */,
+				F0C1A8BC28CA6F4200F609C5 /* Constant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				F0C1A8B728CA5C4C00F609C5 /* TitleView.swift in Sources */,
 				F0C1A87C28C92BA200F609C5 /* FoodImage.swift in Sources */,
 				F0C1A87628C92B4C00F609C5 /* CityImages.swift in Sources */,
+				F0C1A8BD28CA6F4200F609C5 /* Constant.swift in Sources */,
 				F0C1A86E28C927B100F609C5 /* City.swift in Sources */,
 				F0C1A8B528CA56F400F609C5 /* CityListTabViewModel.swift in Sources */,
 			);

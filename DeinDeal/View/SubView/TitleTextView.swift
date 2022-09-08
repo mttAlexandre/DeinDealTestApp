@@ -10,7 +10,7 @@ import SwiftUI
 struct TitleTextView: View {
     
     var text: String
-    var color: Color = .red
+    var color: Color = redColor
     
     var body: some View {
         Text(text)
