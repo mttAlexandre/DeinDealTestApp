@@ -9,7 +9,7 @@ import Foundation
 
 final class CityListTabViewModel: ObservableObject {
     
-    @Published private(set) var cities = [City]()
+    @Published private(set) var cities: [City]? = [City]()
     
     @MainActor
     func fetchCities() async {

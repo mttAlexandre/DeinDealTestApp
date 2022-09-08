@@ -9,12 +9,12 @@ import Foundation
 
 final class RequestHelper {
     
-    static func fetchCities() async -> [City] {
+    static func fetchCities() async -> [City]? {
         let stringUrl = "http://testfoodios.herokuapp.com/settings"
         
         guard let url = URL(string: stringUrl) else {
             print("invalid URL")
-            return []
+            return nil
         }
         
         do {
@@ -24,7 +24,7 @@ final class RequestHelper {
         } catch {
             print(error)
             print(error.localizedDescription)
-            return []
+            return nil
         }
     }
     
@@ -46,5 +46,16 @@ final class RequestHelper {
             print(error.localizedDescription)
             return nil
         }
+    }
+    
+    /// Encode the given string and return a valid URL if possible.
+    /// - Parameter string: a text representation of the URL
+    /// - Returns: A URL from the encoded string if possible, else nil.
+    static func getUrlEncodingString(_ string: String) -> URL? {
+        guard let urlString = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return nil
+        }
+        
+        return URL(string: urlString)
     }
 }

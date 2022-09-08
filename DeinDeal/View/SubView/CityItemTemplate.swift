@@ -14,7 +14,7 @@ struct CityItemTemplate: View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            if let imageURL = URL(string: cityImageUrlString) {
+            if let imageURL = RequestHelper.getUrlEncodingString(cityImageUrlString) {
                 AsyncImage(url: imageURL) { phase in
                     switch phase {
                         case .empty:
