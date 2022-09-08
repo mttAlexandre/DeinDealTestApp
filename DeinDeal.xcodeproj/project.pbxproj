@@ -29,6 +29,12 @@
 		F0C1A88728C92DCC00F609C5 /* CityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A88628C92DCC00F609C5 /* CityDetailView.swift */; };
 		F0C1A88A28C9320A00F609C5 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A88928C9320A00F609C5 /* RequestHelper.swift */; };
 		F0C1A88C28C9332600F609C5 /* RequestHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A88B28C9332600F609C5 /* RequestHelperTest.swift */; };
+		F0C1A8AE28CA535600F609C5 /* CityItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8AD28CA535600F609C5 /* CityItemTemplate.swift */; };
+		F0C1A8B228CA541C00F609C5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F0C1A8B128CA541C00F609C5 /* SDWebImageSwiftUI */; };
+		F0C1A8B528CA56F400F609C5 /* CityListTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8B428CA56F400F609C5 /* CityListTabViewModel.swift */; };
+		F0C1A8B728CA5C4C00F609C5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8B628CA5C4C00F609C5 /* TitleView.swift */; };
+		F0C1A8B928CA5C5A00F609C5 /* RedBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8B828CA5C5A00F609C5 /* RedBannerView.swift */; };
+		F0C1A8BB28CA67E600F609C5 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8BA28CA67E600F609C5 /* TitleTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +82,11 @@
 		F0C1A88B28C9332600F609C5 /* RequestHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelperTest.swift; sourceTree = "<group>"; };
 		F0C1A88E28C934C100F609C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F0C1A88F28C935C500F609C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F0C1A8AD28CA535600F609C5 /* CityItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityItemTemplate.swift; sourceTree = "<group>"; };
+		F0C1A8B428CA56F400F609C5 /* CityListTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListTabViewModel.swift; sourceTree = "<group>"; };
+		F0C1A8B628CA5C4C00F609C5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		F0C1A8B828CA5C5A00F609C5 /* RedBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBannerView.swift; sourceTree = "<group>"; };
+		F0C1A8BA28CA67E600F609C5 /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C1A8B228CA541C00F609C5 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,13 +139,14 @@
 			isa = PBXGroup;
 			children = (
 				F0C1A88F28C935C500F609C5 /* Info.plist */,
-				F0C1A88828C931DC00F609C5 /* Helper */,
-				F0C1A87D28C92BF200F609C5 /* View */,
-				F0C1A86C28C9278F00F609C5 /* Model */,
-				F0C1A84228C91B1000F609C5 /* DeinDealApp.swift */,
 				F0C1A84428C91B1000F609C5 /* ContentView.swift */,
+				F0C1A84228C91B1000F609C5 /* DeinDealApp.swift */,
 				F0C1A84628C91B1100F609C5 /* Assets.xcassets */,
+				F0C1A88828C931DC00F609C5 /* Helper */,
+				F0C1A86C28C9278F00F609C5 /* Model */,
 				F0C1A84828C91B1100F609C5 /* Preview Content */,
+				F0C1A87D28C92BF200F609C5 /* View */,
+				F0C1A8B328CA56D800F609C5 /* ViewModel */,
 			);
 			path = DeinDeal;
 			sourceTree = "<group>";
@@ -183,6 +196,7 @@
 		F0C1A87D28C92BF200F609C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0C1A8AF28CA535C00F609C5 /* SubView */,
 				F0C1A88028C92C9C00F609C5 /* AccountTabView.swift */,
 				F0C1A88628C92DCC00F609C5 /* CityDetailView.swift */,
 				F0C1A88428C92DAC00F609C5 /* CityListTabView.swift */,
@@ -198,6 +212,25 @@
 				F0C1A88928C9320A00F609C5 /* RequestHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		F0C1A8AF28CA535C00F609C5 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1A8AD28CA535600F609C5 /* CityItemTemplate.swift */,
+				F0C1A8B828CA5C5A00F609C5 /* RedBannerView.swift */,
+				F0C1A8BA28CA67E600F609C5 /* TitleTextView.swift */,
+				F0C1A8B628CA5C4C00F609C5 /* TitleView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		F0C1A8B328CA56D800F609C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1A8B428CA56F400F609C5 /* CityListTabViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +249,9 @@
 			dependencies = (
 			);
 			name = DeinDeal;
+			packageProductDependencies = (
+				F0C1A8B128CA541C00F609C5 /* SDWebImageSwiftUI */,
+			);
 			productName = DeinDeal;
 			productReference = F0C1A83F28C91B1000F609C5 /* DeinDeal.app */;
 			productType = "com.apple.product-type.application";
@@ -288,6 +324,9 @@
 				Base,
 			);
 			mainGroup = F0C1A83628C91B1000F609C5;
+			packageReferences = (
+				F0C1A8B028CA541C00F609C5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = F0C1A84028C91B1000F609C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,20 +371,25 @@
 			files = (
 				F0C1A84528C91B1000F609C5 /* ContentView.swift in Sources */,
 				F0C1A88528C92DAC00F609C5 /* CityListTabView.swift in Sources */,
+				F0C1A8B928CA5C5A00F609C5 /* RedBannerView.swift in Sources */,
 				F0C1A87228C92B2100F609C5 /* Cities.swift in Sources */,
 				F0C1A88328C92CA700F609C5 /* OrderTabView.swift in Sources */,
 				F0C1A88728C92DCC00F609C5 /* CityDetailView.swift in Sources */,
+				F0C1A8AE28CA535600F609C5 /* CityItemTemplate.swift in Sources */,
 				F0C1A88128C92C9C00F609C5 /* AccountTabView.swift in Sources */,
 				F0C1A87028C928F700F609C5 /* Foods.swift in Sources */,
 				F0C1A88A28C9320A00F609C5 /* RequestHelper.swift in Sources */,
 				F0C1A84328C91B1000F609C5 /* DeinDealApp.swift in Sources */,
+				F0C1A8BB28CA67E600F609C5 /* TitleTextView.swift in Sources */,
 				F0C1A87A28C92B8A00F609C5 /* FoodItem.swift in Sources */,
 				F0C1A87F28C92C2600F609C5 /* HomeView.swift in Sources */,
 				F0C1A87428C92B3800F609C5 /* CityChannelInfo.swift in Sources */,
 				F0C1A87828C92B7300F609C5 /* FoodFacetCategories.swift in Sources */,
+				F0C1A8B728CA5C4C00F609C5 /* TitleView.swift in Sources */,
 				F0C1A87C28C92BA200F609C5 /* FoodImage.swift in Sources */,
 				F0C1A87628C92B4C00F609C5 /* CityImages.swift in Sources */,
 				F0C1A86E28C927B100F609C5 /* City.swift in Sources */,
+				F0C1A8B528CA56F400F609C5 /* CityListTabViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +721,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F0C1A8B028CA541C00F609C5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F0C1A8B128CA541C00F609C5 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0C1A8B028CA541C00F609C5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F0C1A83728C91B1000F609C5 /* Project object */;
 }
