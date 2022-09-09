@@ -41,6 +41,7 @@
 		F0C1A8C328CA894E00F609C5 /* FoodCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */; };
 		F0C1A8C528CA896700F609C5 /* FoodCategoryItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */; };
 		F0F0BE0728CBCAB800B7B2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */; };
+		F0F0BE1028CBD3B900B7B2A7 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = F0F0BE0F28CBD3B900B7B2A7 /* SDWebImageSVGCoder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C1A8B228CA541C00F609C5 /* SDWebImageSwiftUI in Frameworks */,
+				F0F0BE1028CBD3B900B7B2A7 /* SDWebImageSVGCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +271,7 @@
 			name = DeinDeal;
 			packageProductDependencies = (
 				F0C1A8B128CA541C00F609C5 /* SDWebImageSwiftUI */,
+				F0F0BE0F28CBD3B900B7B2A7 /* SDWebImageSVGCoder */,
 			);
 			productName = DeinDeal;
 			productReference = F0C1A83F28C91B1000F609C5 /* DeinDeal.app */;
@@ -344,6 +347,7 @@
 			mainGroup = F0C1A83628C91B1000F609C5;
 			packageReferences = (
 				F0C1A8B028CA541C00F609C5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				F0F0BE0E28CBD3B900B7B2A7 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 			);
 			productRefGroup = F0C1A84028C91B1000F609C5 /* Products */;
 			projectDirPath = "";
@@ -755,6 +759,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		F0F0BE0E28CBD3B900B7B2A7 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -762,6 +774,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F0C1A8B028CA541C00F609C5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		F0F0BE0F28CBD3B900B7B2A7 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0F0BE0E28CBD3B900B7B2A7 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import SDWebImageSwiftUI
+import SDWebImageSVGCoder
 
 /*
  App delegate for SwiftUI life cycle app :
@@ -15,7 +17,8 @@ import UIKit
 final class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
+        // Add SVG support
+        SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
         return true
     }
 }

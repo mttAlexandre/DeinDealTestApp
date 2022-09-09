@@ -17,7 +17,7 @@ struct CityListTabView: View {
             // MARK: title
         
             TitleView()
-                .padding(.leading)
+                .padding(.horizontal)
             
             ScrollView {
                 VStack {

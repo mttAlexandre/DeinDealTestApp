@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct FoodCategoryItemTemplate: View {
     
@@ -17,17 +18,33 @@ struct FoodCategoryItemTemplate: View {
     }
     
     var body: some View {
-        // TODO: handle selection style
-        VStack {
-            Text(category.label)
-                .fontWeight(isSelected ? .bold : .light)
-                .foregroundColor(isSelected ? redColor : .primary)
-            
-            // TODO: load svg image
-            Image(systemName: "xmark")
-        }
-        .onTapGesture {
+        // TODO: animation on selection
+        Button {
             onTapCategory()
+        } label: {
+            VStack(spacing: 0) {
+                // SVG icon
+                WebImage(
+                    url: URL(string: category.icon)!,
+                    context: [
+                        // default SVG pixel size
+                        .imageThumbnailPixelSize: CGSize(width: 50, height: 50)
+                    ]
+                )
+                .resizable()
+                // real image frame
+                .frame(width: 50, height: 50)
+                .padding(5)
+                .background {
+                    redColor
+                        .opacity(isSelected ? 1 : 0)
+                        .clipShape(Circle())
+                }
+                
+                Text(category.label)
+                    .fontWeight(isSelected ? .bold : .light)
+                    .foregroundColor(isSelected ? redColor : .primary)
+            }
         }
     }
     
