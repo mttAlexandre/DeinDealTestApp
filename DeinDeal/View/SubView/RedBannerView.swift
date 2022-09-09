@@ -33,7 +33,7 @@ struct RedBannerView: View {
             redColor
                 .overlay {
                     Image(systemName: "magnifyingglass")
-                        .font(.system(size: 120))
+                        .font(.system(size: 120, weight: .semibold))
                         .foregroundColor(.white.opacity(0.3))
                         .frame(maxWidth: .infinity,
                                maxHeight: .infinity,

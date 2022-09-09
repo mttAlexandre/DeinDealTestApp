@@ -15,6 +15,10 @@ struct TitleTextView: View {
     var body: some View {
         Text(text)
             .font(.system(size: 60, weight: .light, design: .rounded))
+        // disable line break
+            .lineLimit(1)
+        // reduce font size for smaller screan
+            .minimumScaleFactor(0.5)
             .foregroundColor(color)
     }
 }
