@@ -40,6 +40,7 @@
 		F0C1A8C128CA75AA00F609C5 /* FoodsItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */; };
 		F0C1A8C328CA894E00F609C5 /* FoodCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */; };
 		F0C1A8C528CA896700F609C5 /* FoodCategoryItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */; };
+		F0F0BE0728CBCAB800B7B2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsItemTemplate.swift; sourceTree = "<group>"; };
 		F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryListView.swift; sourceTree = "<group>"; };
 		F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryItemTemplate.swift; sourceTree = "<group>"; };
+		F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				F0C1A84828C91B1100F609C5 /* Preview Content */,
 				F0C1A87D28C92BF200F609C5 /* View */,
 				F0C1A8B328CA56D800F609C5 /* ViewModel */,
+				F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */,
 			);
 			path = DeinDeal;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				F0C1A88528C92DAC00F609C5 /* CityListTabView.swift in Sources */,
 				F0C1A8B928CA5C5A00F609C5 /* RedBannerView.swift in Sources */,
 				F0C1A87228C92B2100F609C5 /* Cities.swift in Sources */,
+				F0F0BE0728CBCAB800B7B2A7 /* AppDelegate.swift in Sources */,
 				F0C1A88328C92CA700F609C5 /* OrderTabView.swift in Sources */,
 				F0C1A88728C92DCC00F609C5 /* CityDetailView.swift in Sources */,
 				F0C1A8AE28CA535600F609C5 /* CityItemTemplate.swift in Sources */,
