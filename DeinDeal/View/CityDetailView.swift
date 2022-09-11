@@ -63,6 +63,11 @@ struct CityDetailView: View {
         }
         .navigationTitle(city.id.capitalized)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                BagButton()
+            }
+        }
         .onAppear {
             Task {
                 await viewModel.fetchFoods(cityID: city.id)

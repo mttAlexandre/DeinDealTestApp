@@ -42,6 +42,7 @@
 		F0C1A8C528CA896700F609C5 /* FoodCategoryItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */; };
 		F0F0BE0728CBCAB800B7B2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */; };
 		F0F0BE1028CBD3B900B7B2A7 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = F0F0BE0F28CBD3B900B7B2A7 /* SDWebImageSVGCoder */; };
+		F0F0BE1228CE730800B7B2A7 /* BagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0BE1128CE730800B7B2A7 /* BagButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryListView.swift; sourceTree = "<group>"; };
 		F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryItemTemplate.swift; sourceTree = "<group>"; };
 		F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0F0BE1128CE730800B7B2A7 /* BagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */,
 				F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */,
 				F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */,
+				F0F0BE1128CE730800B7B2A7 /* BagButton.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				F0C1A8BB28CA67E600F609C5 /* TitleTextView.swift in Sources */,
 				F0C1A87A28C92B8A00F609C5 /* FoodItem.swift in Sources */,
 				F0C1A87F28C92C2600F609C5 /* HomeView.swift in Sources */,
+				F0F0BE1228CE730800B7B2A7 /* BagButton.swift in Sources */,
 				F0C1A87428C92B3800F609C5 /* CityChannelInfo.swift in Sources */,
 				F0C1A87828C92B7300F609C5 /* FoodFacetCategories.swift in Sources */,
 				F0C1A8B728CA5C4C00F609C5 /* TitleView.swift in Sources */,

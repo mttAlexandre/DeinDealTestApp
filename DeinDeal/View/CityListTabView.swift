@@ -14,10 +14,16 @@ struct CityListTabView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             
-            // MARK: title
-        
-            TitleView()
-                .padding(.horizontal)
+            // MARK: title & bag button
+            // superpose button on top of title
+            ZStack(alignment: .topLeading) {
+                TitleView()
+                    .padding(.horizontal)
+                
+                BagButton()
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
             
             ScrollView {
                 VStack {
