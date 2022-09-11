@@ -23,7 +23,6 @@ struct CityItemTemplate: View {
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(maxWidth: 200, maxHeight: 100)
                                 .cornerRadius(12)
                                 .shadow(radius: 7)
                         case .failure:
@@ -32,6 +31,7 @@ struct CityItemTemplate: View {
                             EmptyView()
                     }
                 }
+                .frame(maxWidth: 200, maxHeight: 100)
             }
             
             Text(cityName.uppercased())

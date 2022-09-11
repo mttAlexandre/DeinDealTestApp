@@ -18,6 +18,8 @@ struct FoodsItemTemplate: View {
                     switch phase {
                         case .empty:
                             ProgressView()
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding()
                         case .success(let image):
                             image
                                 .resizable()
