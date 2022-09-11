@@ -18,12 +18,18 @@ struct FoodCategoryItemTemplate: View {
     }
     
     var body: some View {
-        // TODO: animation on selection
         Button {
-            onTapCategory()
+            // basic animation on click
+            // animates button style (everything depending on 'isSelected'
+            // as well as the list filtering 
+            withAnimation {
+                onTapCategory()
+            }
         } label: {
             VStack(spacing: 0) {
-                // SVG icon
+                // TODO: try to use cache
+                
+                // SVG icon (not supported by native SwiftUI component)
                 WebImage(
                     url: URL(string: category.icon)!,
                     context: [
@@ -32,6 +38,14 @@ struct FoodCategoryItemTemplate: View {
                     ]
                 )
                 .resizable()
+                .placeholder {
+                    // placeholder while image is loading
+                    Rectangle()
+                        .foregroundColor(.gray)
+                }
+                .indicator(.activity) // Activity Indicator
+                .transition(.fade(duration: 0.5)) // Fade Transition with duration
+                .scaledToFit()
                 // real image frame
                 .frame(width: 50, height: 50)
                 .padding(5)
@@ -46,6 +60,10 @@ struct FoodCategoryItemTemplate: View {
                     .foregroundColor(isSelected ? redColor : .primary)
             }
         }
+        // SDWebImage common problem :
+        // https://github.com/SDWebImage/SDWebImageSwiftUI
+        // I didn't get the issue but it's safer to set the style here
+        .buttonStyle(.plain)
     }
     
     private func onTapCategory() {
