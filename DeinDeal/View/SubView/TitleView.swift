@@ -19,6 +19,8 @@ struct TitleView: View {
             }
             
         }
+        // reduce font size evenly for all TitleTextView for smaller screan
+        .minimumScaleFactor(0.5)
         .padding(.top, 0)
     }
 }
