@@ -15,4 +15,8 @@ final class CityListTabViewModel: ObservableObject {
     func fetchCities() async {
         cities = await RequestHelper.fetchCities()
     }
+    
+    func getCities() -> [City] {
+        cities ?? []
+    }
 }

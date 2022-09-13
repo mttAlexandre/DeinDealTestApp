@@ -9,12 +9,23 @@ import SwiftUI
 
 struct CityDetailView: View {
     
-    var city: City
+    init(city: City) {
+        // city State muste be initialized like this
+        self._city = State(initialValue: city)
+    }
     
+    // EnvironmentObject must be @ObservableObject class, can't use protocol here
+    @EnvironmentObject private var cityProvider: CityListTabViewModel
+    // view model of this view
     @StateObject private var viewModel = CityDetailViewModel()
-    
+    // current city must be a @State to be modified on RedBanner tap
+    @State private var city: City
+    // all category selected, multiple selection enable
     @State private var selectedFoodCategories: Set<String> = []
+    // alert to change location
+    @State private var showConfirmationDialog = false
     
+    // food list content, filtered and sorted
     private var filteredFoodItems: [FoodItem] {
         if viewModel.foods == nil { return [] }
         
@@ -40,6 +51,8 @@ struct CityDetailView: View {
             }
     }
     
+    // MARK: - body
+    
     var body: some View {
         VStack {
             
@@ -47,6 +60,32 @@ struct CityDetailView: View {
             
             RedBannerView(title: city.id.capitalized,
                           subtitle: "Tap here to change the address")
+            // MARK: bonus point - tap to change location
+            .onTapGesture {
+                // display alert on tap
+                // assuming that if there is only on city, we are already diplaying it
+                showConfirmationDialog = cityProvider.getCities().count > 1
+            }
+            .confirmationDialog("Select another location", isPresented: $showConfirmationDialog) {
+                ForEach(cityProvider.getCities()) { city in
+                    // remove the current city from the choices
+                    if city.id != self.city.id {
+                        Button(city.id.capitalized) {
+                            self.city = city
+                            // clear seleted categories
+                            selectedFoodCategories = []
+                            // reload view for the selected city
+                            loadFoodsForCity()
+                        }
+                    }
+                }
+                
+                // default cancel button
+                Button("Cancel", role: .cancel) { }
+            } message: {
+                Text("Select another location")
+            }
+
             
             // MARK: filter list
             
@@ -57,6 +96,7 @@ struct CityDetailView: View {
             
             List(filteredFoodItems) { item in
                 FoodsItemTemplate(foodItem: item)
+                // remove horizontal padding
                     .listRowInsets(EdgeInsets())
             }
             .listStyle(.plain)
@@ -69,9 +109,15 @@ struct CityDetailView: View {
             }
         }
         .onAppear {
-            Task {
-                await viewModel.fetchFoods(cityID: city.id)
-            }
+            loadFoodsForCity()
+        }
+    }
+    
+    // MARK: - func
+    
+    private func loadFoodsForCity() {
+        Task {
+            await viewModel.fetchFoods(cityID: city.id)
         }
     }
 }

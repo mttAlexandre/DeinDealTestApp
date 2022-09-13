@@ -155,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C1A88F28C935C500F609C5 /* Info.plist */,
+				F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */,
 				F0C1A84428C91B1000F609C5 /* ContentView.swift */,
 				F0C1A84228C91B1000F609C5 /* DeinDealApp.swift */,
 				F0C1A84628C91B1100F609C5 /* Assets.xcassets */,
@@ -163,7 +164,6 @@
 				F0C1A84828C91B1100F609C5 /* Preview Content */,
 				F0C1A87D28C92BF200F609C5 /* View */,
 				F0C1A8B328CA56D800F609C5 /* ViewModel */,
-				F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */,
 			);
 			path = DeinDeal;
 			sourceTree = "<group>";

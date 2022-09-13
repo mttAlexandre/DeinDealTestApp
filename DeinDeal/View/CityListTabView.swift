@@ -68,6 +68,9 @@ struct CityListTabView: View {
                     ForEach(viewModel.cities!) { city in
                         NavigationLink {
                             CityDetailView(city: city)
+                            // providing the viewModel to the detail view
+                            // it must be done foreach NavigationLink destination
+                                .environmentObject(viewModel)
                         } label: {
                             CityItemTemplate(cityName: city.id,
                                              cityImageUrlString: city.channelInfo.images.small)
