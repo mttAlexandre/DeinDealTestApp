@@ -12,10 +12,17 @@ struct FoodCategoryListView: View {
     @Binding var selectedFoodCategories: Set<String>
     var categories: [FoodFacetCategories]
     
+    // sorted categories
+    private var sortedCategories: [FoodFacetCategories] {
+        categories.sorted {
+            $0.label < $1.label
+        }
+    }
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
-                ForEach(categories) { category in
+                ForEach(sortedCategories) { category in
                     FoodCategoryItemTemplate(selectedFoodCategories: $selectedFoodCategories,
                                              category: category)
                 }
