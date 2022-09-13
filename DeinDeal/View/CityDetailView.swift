@@ -15,6 +15,7 @@ struct CityDetailView: View {
     }
     
     // EnvironmentObject must be @ObservableObject class, can't use protocol here
+    // I don't want to reload all cities here so I use parent viewModel
     @EnvironmentObject private var cityProvider: CityListTabViewModel
     // view model of this view
     @StateObject private var viewModel = CityDetailViewModel()
@@ -66,6 +67,7 @@ struct CityDetailView: View {
                 // assuming that if there is only on city, we are already diplaying it
                 showConfirmationDialog = cityProvider.getCities().count > 1
             }
+            // alert to diplay other locations
             .confirmationDialog("Select another location", isPresented: $showConfirmationDialog) {
                 ForEach(cityProvider.getCities()) { city in
                     // remove the current city from the choices
