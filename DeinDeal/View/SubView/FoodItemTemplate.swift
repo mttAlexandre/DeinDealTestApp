@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodsItemTemplate: View {
+struct FoodItemTemplate: View {
     
     var foodItem: FoodItem
     
@@ -46,9 +46,9 @@ struct FoodsItemTemplate: View {
     }
 }
 
-struct FoodsItemTemplate_Previews: PreviewProvider {
+struct FoodItemTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        FoodsItemTemplate(
+        FoodItemTemplate(
             foodItem: FoodItem(id: 90555,
                                title: "Yalla Habibi",
                                subtitle: "Mezze, Schawarma, Falafel & Kafta",

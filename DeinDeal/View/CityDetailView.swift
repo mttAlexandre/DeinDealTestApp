@@ -97,7 +97,7 @@ struct CityDetailView: View {
             // MARK: food list
             
             List(filteredFoodItems) { item in
-                FoodsItemTemplate(foodItem: item)
+                FoodItemTemplate(foodItem: item)
                 // remove horizontal padding
                     .listRowInsets(EdgeInsets())
             }
