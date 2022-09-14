@@ -41,9 +41,9 @@ struct FoodCategoryItemTemplate: View {
                         .imageCoder: SDImageSVGCoder.shared,
                         // store it in memory because it will, most likely, be displayed multiple times
                         .storeCacheType: SDImageCacheType.memory.rawValue
-
                     ]
                 )
+                
                 .resizable()
                 .placeholder {
                     // placeholder while image is loading
