@@ -14,6 +14,8 @@ struct CityItemTemplate: View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
+            // this can stay as AsyncImage because the first tab view is not reloaded
+            // AsyncImage uses NSURLCache
             AsyncImage(url: RequestHelper.getUrlEncodingString(cityImageUrlString)) { phase in
                 switch phase {
                     case .empty:

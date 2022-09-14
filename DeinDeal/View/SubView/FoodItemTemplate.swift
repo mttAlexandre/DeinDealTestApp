@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct FoodItemTemplate: View {
     
@@ -13,23 +14,22 @@ struct FoodItemTemplate: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            AsyncImage(url: RequestHelper.getUrlEncodingString(foodItem.images.cover)) { phase in
-                switch phase {
-                    case .empty:
-                        ProgressView()
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .padding()
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: .infinity)
-                    case .failure:
-                        Image(systemName: "xmark")
-                    @unknown default:
-                        EmptyView()
-                }
+            WebImage(
+                url: RequestHelper.getUrlEncodingString(foodItem.images.cover),
+                     options: .progressiveLoad, context: [
+                        // store it in disk
+                        .storeCacheType: SDImageCacheType.disk.rawValue
+                     ]
+            )
+            .resizable()
+            .placeholder {
+                // placeholder while image is loading
+                Rectangle()
+                    .foregroundColor(.gray)
             }
+            .indicator(.activity) // Activity Indicator
+            .transition(.fade(duration: 0.5)) // Fade Transition with duration
+            .scaledToFit()
             
             Text(foodItem.title)
                 .font(.system(.body, design: .rounded))

@@ -33,6 +33,7 @@ struct FoodCategoryItemTemplate: View {
                 // SVG icon (not supported by native SwiftUI component)
                 WebImage(
                     url: URL(string: category.icon),
+                    // load ans display image progessively
                     options: .progressiveLoad,
                     context: [
                         // generated thumbnail image size, aspect ratio is respected
@@ -43,7 +44,6 @@ struct FoodCategoryItemTemplate: View {
                         .storeCacheType: SDImageCacheType.memory.rawValue
                     ]
                 )
-                
                 .resizable()
                 .placeholder {
                     // placeholder while image is loading
