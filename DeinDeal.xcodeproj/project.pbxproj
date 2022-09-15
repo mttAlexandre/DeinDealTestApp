@@ -40,7 +40,6 @@
 		F0C1A8C128CA75AA00F609C5 /* FoodsItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */; };
 		F0C1A8C328CA894E00F609C5 /* FoodCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */; };
 		F0C1A8C528CA896700F609C5 /* FoodCategoryItemTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */; };
-		F0F0BE0728CBCAB800B7B2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */; };
 		F0F0BE1028CBD3B900B7B2A7 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = F0F0BE0F28CBD3B900B7B2A7 /* SDWebImageSVGCoder */; };
 		F0F0BE1228CE730800B7B2A7 /* BagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0BE1128CE730800B7B2A7 /* BagButton.swift */; };
 /* End PBXBuildFile section */
@@ -100,7 +99,6 @@
 		F0C1A8C028CA75AA00F609C5 /* FoodsItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsItemTemplate.swift; sourceTree = "<group>"; };
 		F0C1A8C228CA894E00F609C5 /* FoodCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryListView.swift; sourceTree = "<group>"; };
 		F0C1A8C428CA896700F609C5 /* FoodCategoryItemTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryItemTemplate.swift; sourceTree = "<group>"; };
-		F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F0BE1128CE730800B7B2A7 /* BagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				F0C1A88F28C935C500F609C5 /* Info.plist */,
-				F0F0BE0628CBCAB800B7B2A7 /* AppDelegate.swift */,
 				F0C1A84428C91B1000F609C5 /* ContentView.swift */,
 				F0C1A84228C91B1000F609C5 /* DeinDealApp.swift */,
 				F0C1A84628C91B1100F609C5 /* Assets.xcassets */,
@@ -399,7 +396,6 @@
 				F0C1A88528C92DAC00F609C5 /* CityListTabView.swift in Sources */,
 				F0C1A8B928CA5C5A00F609C5 /* RedBannerView.swift in Sources */,
 				F0C1A87228C92B2100F609C5 /* Cities.swift in Sources */,
-				F0F0BE0728CBCAB800B7B2A7 /* AppDelegate.swift in Sources */,
 				F0C1A88328C92CA700F609C5 /* OrderTabView.swift in Sources */,
 				F0C1A88728C92DCC00F609C5 /* CityDetailView.swift in Sources */,
 				F0C1A8AE28CA535600F609C5 /* CityItemTemplate.swift in Sources */,

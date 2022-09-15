@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import SDWebImageSVGCoder
 
 struct FoodCategoryItemTemplate: View {
     
@@ -31,10 +32,16 @@ struct FoodCategoryItemTemplate: View {
                 
                 // SVG icon (not supported by native SwiftUI component)
                 WebImage(
-                    url: URL(string: category.icon)!,
+                    url: URL(string: category.icon),
+                    options: .progressiveLoad,
                     context: [
-                        // default SVG pixel size
-                        .imageThumbnailPixelSize: CGSize(width: 50, height: 50)
+                        // generated thumbnail image size, aspect ratio is respected
+                        .imageThumbnailPixelSize: CGSize(width: 50, height: 50),
+                        // SVG coder
+                        .imageCoder: SDImageSVGCoder.shared,
+                        // store it in memory because it will, most likely, be displayed multiple times
+                        .storeCacheType: SDImageCacheType.memory.rawValue
+
                     ]
                 )
                 .resizable()
