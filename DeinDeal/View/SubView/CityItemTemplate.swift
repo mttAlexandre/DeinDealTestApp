@@ -14,25 +14,23 @@ struct CityItemTemplate: View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            if let imageURL = RequestHelper.getUrlEncodingString(cityImageUrlString) {
-                AsyncImage(url: imageURL) { phase in
-                    switch phase {
-                        case .empty:
-                            ProgressView()
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .cornerRadius(12)
-                                .shadow(radius: 7)
-                        case .failure:
-                            Image(systemName: "xmark")
-                        @unknown default:
-                            EmptyView()
-                    }
+            AsyncImage(url: RequestHelper.getUrlEncodingString(cityImageUrlString)) { phase in
+                switch phase {
+                    case .empty:
+                        ProgressView()
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .cornerRadius(12)
+                            .shadow(radius: 7)
+                    case .failure:
+                        Image(systemName: "xmark")
+                    @unknown default:
+                        EmptyView()
                 }
-                .frame(maxWidth: 200, maxHeight: 100)
             }
+            .frame(maxWidth: 200, maxHeight: 100)
             
             Text(cityName.uppercased())
                 .foregroundColor(.white)

@@ -13,23 +13,21 @@ struct FoodsItemTemplate: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            if let imageURL = RequestHelper.getUrlEncodingString(foodItem.images.cover) {
-                AsyncImage(url: imageURL) { phase in
-                    switch phase {
-                        case .empty:
-                            ProgressView()
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .padding()
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
-                        case .failure:
-                            Image(systemName: "xmark")
-                        @unknown default:
-                            EmptyView()
-                    }
+            AsyncImage(url: RequestHelper.getUrlEncodingString(foodItem.images.cover)) { phase in
+                switch phase {
+                    case .empty:
+                        ProgressView()
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding()
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: .infinity)
+                    case .failure:
+                        Image(systemName: "xmark")
+                    @unknown default:
+                        EmptyView()
                 }
             }
             
