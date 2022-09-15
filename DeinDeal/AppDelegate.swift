@@ -7,8 +7,6 @@
 
 import Foundation
 import UIKit
-import SDWebImageSwiftUI
-import SDWebImageSVGCoder
 
 /*
  App delegate for SwiftUI life cycle app :
